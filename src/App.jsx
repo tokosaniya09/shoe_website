@@ -1,3 +1,4 @@
+import { ClerkProvider } from '@clerk/clerk-react';
 import Nav from './components/Nav';
 import {
 	CustomerReviews, 
