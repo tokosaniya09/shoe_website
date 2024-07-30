@@ -20,7 +20,7 @@ const Nav = () => {
                     <li key={item.label}>
                         <a 
                             href="item.href" 
-                            className='font-monts errat leading-normal text-lg text-slate-gray'
+                            className='font-monts errat leading-normal text-lg text-slate-gray hover:text-red-700'
                         >
                             {item.label}
                         </a>
@@ -28,7 +28,7 @@ const Nav = () => {
                 ))}
             </ul>
             <img 
-                className="block lg:hidden" 
+                className="block lg:hidden cursor-pointer active:animate-pingReverse" 
                 src={hamburger} 
                 alt="hamburger icon" 
                 width={25} 

@@ -37,6 +37,15 @@ export default {
       },
       screens: {
         "wide": "1440px"
+      },
+      keyframes: {
+        pingReverse: {
+          "0%": {transform: "scale(1)"},
+          "100%": {transform: "scale(0.9)"},
+        },
+      },
+      animation: {
+        pingReverse: "pingReverse 1s cubic-bezier(0, 0, 0.2, 1) infinite"
       }
     },
   },
