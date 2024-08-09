@@ -4,8 +4,15 @@ import { bigShoe1 } from "../assets/images"
 import Button from "../components/Button"
 import ShoeCard from "../components/ShoeCard"
 import { shoes, statistics } from "../constants"
+import { useNavigate } from "react-router-dom"
 
 const Hero = () => {
+    const navigate = useNavigate()
+
+    const handleButtonClick = () => {
+        navigate("shoppingPage")
+    }
+
     const [bigShoeImg, setBigShoeImg] = useState(bigShoe1)
 
     return (
@@ -30,8 +37,8 @@ const Hero = () => {
                     Discover stylish Nike arrivals, quality comfort, and innovation for your active life.
                 </p>
 
-                <Button label="Show now" iconURL={arrowRight}/>
-
+                <Button label="Show now" iconURL={arrowRight} onClick={handleButtonClick}/>
+                
                 <div className="flex justify-start items-start flex-wrap w-full mt-20 gap-16">
                     {statistics.map((stat, index) => (
                         <div key={index}>

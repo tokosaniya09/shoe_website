@@ -33,23 +33,28 @@ const Footer = () => {
 				</div>
 
 				<div className="flex flex-1 justify-between lg:gap-10 gap-20 flex-wrap">
-					{footerLinks.map((section) => (
-						<div key={section}>
-							<h4 className="text-white font-montserrat text-2xl leading-normal mb-6 font-medium">
-								{ section.title }
-							</h4> 
-							<ul>
-									{section.links.map((link) => (
-										<li 
+					{footerLinks.map((section, index1) => {
+						return (
+							<div key={index1}>
+								<h4 className="text-white font-montserrat text-2xl leading-normal mb-6 font-medium">
+									{ section.title }
+								</h4> 
+								<ul>
+									{section.links.map((link, index2) => {
+										return (
+											<li 
 											className="mt-3 text-white-400 font-montserrat text-base leading-normal hover:text-slate-gray cursor-pointer"
-											key={link.name}
+											key={index2}
 										>
 											<a href="">{ link.name }</a>
 										</li>
-									))}
-							</ul>
-						</div>
-					))}
+										)
+									})}
+								</ul>
+							</div>
+						)
+
+					})}
 				</div>
 			</div>
 

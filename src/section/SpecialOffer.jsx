@@ -1,8 +1,15 @@
 import { offer } from "../assets/images"
 import  Button  from "../components/Button"
 import { arrowRight } from "../assets/icons"
+import { useNavigate } from "react-router-dom"
 
 const SpecialOffer = () => {
+	const navigate = useNavigate()
+
+	const handleOnClick = (path) => {
+		navigate(path)
+	}
+
 	return (
 		<section className="flex justify-wrap items-center max-xl:flex-col-reverse gap-10 max-container">
 			<div className="flex-1">
@@ -27,12 +34,14 @@ const SpecialOffer = () => {
 					<Button 
 						label="Shop now"
 						iconURL={arrowRight} 
+						onClick={() => handleOnClick ("specialOfferPage")}
 					/>
 					<Button 
 						label="Learn more"
 						backgroundColor="bg-white"
 						borderColor="border-slate-gray"
 						text-color="text-slate-gray" 
+						onClick={() => handleOnClick ("learnMorePage")}
 					/>
 				</div>
 			</div>
