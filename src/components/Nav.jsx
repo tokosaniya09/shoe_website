@@ -34,24 +34,23 @@ const Nav = () => {
             <div className='absolute right-15p'>
                 <SignedOut>
                     <SignInButton>
-                    <button className="flex justify-center items-center gap-2 px-7 py-4 border font-montserrat text-lg leading-none bg-coral-red text-white border-coral-red hover:bg-red-500 hover:border-red-500 rounded-full active:animate-pingReverse">
+                    <button className="px-3 py-3 border font-montserrat text-md leading-none bg-coral-red text-white border-coral-red hover:bg-red-500 hover:border-red-500 rounded-full active:animate-pingReverse">
                         SignUp
                     </button>
                     </SignInButton>
                 </SignedOut>
             </div>
 
-
-            
-            {/* <SignedOut>
-                <SignInButton>
-                    <Button label={SignUp}/>
-                </SignInButton>
-            </SignedOut> */}
-
-            <div className="absolute right-15p top-35p">
+            <div className="absolute right-15p top-30p">
                 <SignedIn>
-                    <UserButton />
+                    <UserButton 
+                        appearance={{
+                        elements: {
+                            rootBox: "w-full h-full flex justify-center items-center",
+                            userButtonAvatarBox: "w-10 h-10", 
+                        },
+                        }} 
+                    />
                 </SignedIn>
             </div>
 
